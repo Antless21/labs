@@ -17,3 +17,9 @@ def count_vowels(text):
         if char in vowels:
             count += 1
     return count
+def gcd_euclid(a, b):
+    if a <= 0 or b <= 0:
+        raise ValueError("Числа должны быть натуральными")
+    while b != 0:
+        a, b = b, a % b
+    return a
