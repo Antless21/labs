@@ -3,3 +3,10 @@ def sum_numbers(num):
     for i in range(1, num + 1, 2):
         total += i
     return total
+
+def gcd_simple(a, b):
+    if a <= 0 or b <= 0:
+        raise ValueError("Числа должны быть натуральными")
+    for d in range(min(a, b), 0, -1):
+        if a % d == 0 and b % d == 0:
+            return d
